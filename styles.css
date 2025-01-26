@@ -3,20 +3,28 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background: url('street_food_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #ff9800;
-    color: white;
+    background-color: rgba(255, 152, 0, 0.9);
     padding: 20px;
 }
 
-header h1 {
-    margin: 0;
+.animated-logo {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 20px #ff9800; }
 }
 
 nav ul {
@@ -32,7 +40,12 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+#menu-logo {
+    width: 50px;
+    cursor: pointer;
 }
 
 /* Shop Section */
@@ -40,41 +53,21 @@ nav a {
     padding: 50px 20px;
 }
 
-.animated-cook img {
+.animated-cook {
+    position: relative;
     width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background: url('cook_body.png') no-repeat center center;
+    background-size: cover;
+}
+
+.cook-face {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 100px;
     border-radius: 50%;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Menu Section */
-.menu {
-    padding: 30px;
-    background: #fff;
-    border-radius: 10px;
-    width: 80%;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    font-size: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Contact Section */
-.contact {
-    padding: 30px;
 }
 
 /* Footer */
